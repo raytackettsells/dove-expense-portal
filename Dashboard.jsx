@@ -4,7 +4,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid,
   LineChart, Line,
 } from 'recharts'
-import { supabase } from '../lib/supabase'
+import { supabase } from './supabase'
 
 const MONTHS = [
   'Jan','Feb','Mar','Apr','May','Jun',
