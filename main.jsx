@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { AuthProvider, useAuth } from './hooks/useAuth'
-import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
-import Import from './pages/Import'
-import Layout from './components/Layout'
+import { AuthProvider, useAuth } from './useAuth'
+import Login from './Login'
+import Dashboard from './Dashboard'
+import Import from './Import'
+import Layout from './Layout'
 import './index.css'
 
 function ProtectedRoute({ children }) {
