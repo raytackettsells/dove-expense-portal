@@ -1,5 +1,5 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom'
-import { useAuth } from '../hooks/useAuth'
+import { useAuth } from './useAuth'
 
 export default function Layout() {
   const { user, signOut } = useAuth()
@@ -12,7 +12,6 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Top nav */}
       <header className="bg-gray-900 border-b border-gray-800 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="text-2xl">🕊️</span>
@@ -24,9 +23,7 @@ export default function Layout() {
             to="/dashboard"
             className={({ isActive }) =>
               `px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                isActive
-                  ? 'bg-indigo-600 text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                isActive ? 'bg-indigo-600 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800'
               }`
             }
           >
@@ -36,9 +33,7 @@ export default function Layout() {
             to="/import"
             className={({ isActive }) =>
               `px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                isActive
-                  ? 'bg-indigo-600 text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                isActive ? 'bg-indigo-600 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800'
               }`
             }
           >
@@ -46,17 +41,12 @@ export default function Layout() {
           </NavLink>
           <div className="ml-4 flex items-center gap-3 pl-4 border-l border-gray-700">
             <span className="text-gray-500 text-xs hidden sm:block">{user?.email}</span>
-            <button
-              onClick={handleSignOut}
-              className="text-gray-400 hover:text-white text-sm transition-colors"
-            >
+            <button onClick={handleSignOut} className="text-gray-400 hover:text-white text-sm transition-colors">
               Sign out
             </button>
           </div>
         </nav>
       </header>
-
-      {/* Page content */}
       <main className="flex-1 p-6">
         <Outlet />
       </main>
