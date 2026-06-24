@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import * as XLSX from 'xlsx'
-import { supabase } from '../lib/supabase'
+import { supabase } from './supabase'
 
 const MONTHS = [
   'January','February','March','April','May','June',
